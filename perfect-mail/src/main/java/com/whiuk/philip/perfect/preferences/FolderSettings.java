@@ -34,7 +34,7 @@ class FolderSettings {
         s.put("notifyMode", Settings.versions(
                 new V(34, new EnumSetting<>(FolderClass.class, FolderClass.INHERITED))
         ));
-        s.put("syncMode", Settings.versions(
+        s.put("pollMode", Settings.versions(
                 new V(1, new EnumSetting<>(FolderClass.class, FolderClass.INHERITED))
         ));
         s.put("pushMode", Settings.versions(

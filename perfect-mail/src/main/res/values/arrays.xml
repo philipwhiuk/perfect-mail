@@ -273,14 +273,14 @@
         <item>SECOND_CLASS</item>
     </string-array>
 
-    <string-array name="folder_settings_folder_sync_mode_entries">
-        <item>@string/folder_settings_folder_sync_mode_normal</item>
-        <item>@string/folder_settings_folder_sync_mode_first_class</item>
-        <item>@string/folder_settings_folder_sync_mode_second_class</item>
-        <item>@string/folder_settings_folder_sync_mode_inherited</item>
+    <string-array name="folder_settings_folder_poll_mode_entries">
+        <item>@string/folder_settings_folder_poll_mode_normal</item>
+        <item>@string/folder_settings_folder_poll_mode_first_class</item>
+        <item>@string/folder_settings_folder_poll_mode_second_class</item>
+        <item>@string/folder_settings_folder_poll_mode_inherited</item>
     </string-array>
 
-    <string-array name="folder_settings_folder_sync_mode_values" translatable="false">
+    <string-array name="folder_settings_folder_poll_mode_values" translatable="false">
         <item>NO_CLASS</item>
         <item>FIRST_CLASS</item>
         <item>SECOND_CLASS</item>

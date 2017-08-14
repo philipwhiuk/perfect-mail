@@ -44,11 +44,11 @@
 
         <ListPreference
             android:persistent="false"
-            android:key="folder_settings_folder_sync_mode"
-            android:title="@string/folder_settings_folder_sync_mode_label"
-            android:entries="@array/folder_settings_folder_sync_mode_entries"
-            android:entryValues="@array/folder_settings_folder_sync_mode_values"
-            android:dialogTitle="@string/folder_settings_folder_sync_mode_label" />
+            android:key="folder_settings_folder_poll_mode"
+            android:title="@string/folder_settings_folder_poll_mode_label"
+            android:entries="@array/folder_settings_folder_poll_mode_entries"
+            android:entryValues="@array/folder_settings_folder_poll_mode_values"
+            android:dialogTitle="@string/folder_settings_folder_poll_mode_label" />
 
         <ListPreference
             android:persistent="false"

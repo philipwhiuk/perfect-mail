@@ -29,7 +29,7 @@ public class FolderSettings extends MailPreferenceActivity {
 
     private static final String PREFERENCE_TOP_CATERGORY = "folder_settings";
     private static final String PREFERENCE_DISPLAY_CLASS = "folder_settings_folder_display_mode";
-    private static final String PREFERENCE_SYNC_CLASS = "folder_settings_folder_sync_mode";
+    private static final String PREFERENCE_POLL_CLASS = "folder_settings_folder_poll_mode";
     private static final String PREFERENCE_PUSH_CLASS = "folder_settings_folder_push_mode";
     private static final String PREFERENCE_NOTIFY_CLASS = "folder_settings_folder_notify_mode";
     private static final String PREFERENCE_IN_TOP_GROUP = "folder_settings_in_top_group";
@@ -101,7 +101,7 @@ public class FolderSettings extends MailPreferenceActivity {
             }
         });
 
-        mSyncClass = (ListPreference) findPreference(PREFERENCE_SYNC_CLASS);
+        mSyncClass = (ListPreference) findPreference(PREFERENCE_POLL_CLASS);
         mSyncClass.setValue(mFolder.getRawSyncClass().name());
         mSyncClass.setSummary(mSyncClass.getEntry());
         mSyncClass.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
