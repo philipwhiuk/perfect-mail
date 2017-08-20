@@ -241,7 +241,6 @@ public class HtmlConverter {
                     quotesThisLine = 0;
                     break;
                 default:
-                    isStartOfLine = false;
 
                     appendbq(buff, quotesThisLine, quoteDepth);
                     quoteDepth = quotesThisLine;

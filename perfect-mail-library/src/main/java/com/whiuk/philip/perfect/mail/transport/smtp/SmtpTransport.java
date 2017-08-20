@@ -457,7 +457,7 @@ public class SmtpTransport extends Transport {
     private void parseOptionalSizeValue(Map<String, String> extensions) {
         if (extensions.containsKey("SIZE")) {
             String optionalsizeValue = extensions.get("SIZE");
-            if (optionalsizeValue != null && optionalsizeValue != "") {
+            if (optionalsizeValue != null && !optionalsizeValue.equals("")) {
                 try {
                     mLargestAcceptableMessage = Integer.parseInt(optionalsizeValue);
                 } catch (NumberFormatException e) {

@@ -149,7 +149,7 @@ public class OpenPgpAppSelectDialog extends Activity {
             // Init ArrayAdapter with OpenPGP Providers
             ListAdapter adapter = new ArrayAdapter<OpenPgpProviderEntry>(getActivity(),
                     android.R.layout.select_dialog_singlechoice, android.R.id.text1, openPgpProviderList) {
-                public View getView(int position, View convertView, ViewGroup parent) {
+                public @NonNull View getView(int position, View convertView, @NonNull ViewGroup parent) {
                     // User super class to create the View
                     View v = super.getView(position, convertView, parent);
                     TextView tv = (TextView) v.findViewById(android.R.id.text1);

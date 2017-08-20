@@ -21,6 +21,9 @@ import java.io.FilterOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
+import android.support.annotation.NonNull;
+
+
 /**
  * Provides Base64 encoding and decoding in a streaming fashion (unlimited size).
  * When encoding the default lineLength is 76 characters and the default
@@ -114,10 +117,8 @@ public class Base64OutputStream extends FilterOutputStream {
      * @throws IndexOutOfBoundsException if offset, len or buffer size are invalid
      */
     @Override
-    public void write(byte b[], int offset, int len) throws IOException {
-        if (b == null) {
-            throw new NullPointerException();
-        } else if (offset < 0 || len < 0 || offset + len < 0) {
+    public void write(@NonNull byte b[], int offset, int len) throws IOException {
+        if (offset < 0 || len < 0 || offset + len < 0) {
             throw new IndexOutOfBoundsException();
         } else if (offset > b.length || offset + len > b.length) {
             throw new IndexOutOfBoundsException();

@@ -1,6 +1,3 @@
-/**
- *
- */
 package com.whiuk.philip.perfect;
 
 import java.io.Serializable;

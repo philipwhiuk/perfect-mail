@@ -127,7 +127,7 @@ public class OpenPgpSignatureResult implements Parcelable {
     }
 
     public void writeToParcel(Parcel dest, int flags) {
-        /**
+        /*
          * NOTE: When adding fields in the process of updating this API, make sure to bump
          * {@link #PARCELABLE_VERSION}.
          */

@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Locale;
 
+import android.support.annotation.NonNull;
+
 
 /**
  * A filtering InputStream that allows single byte "peeks" without consuming the byte. The
@@ -40,7 +42,7 @@ public class PeekableInputStream extends FilterInputStream {
     }
 
     @Override
-    public int read(byte[] buffer, int offset, int length) throws IOException {
+    public int read(@NonNull byte[] buffer, int offset, int length) throws IOException {
         if (!peeked) {
             return in.read(buffer, offset, length);
         } else {
@@ -56,7 +58,7 @@ public class PeekableInputStream extends FilterInputStream {
     }
 
     @Override
-    public int read(byte[] buffer) throws IOException {
+    public int read(@NonNull byte[] buffer) throws IOException {
         return read(buffer, 0, buffer.length);
     }
 

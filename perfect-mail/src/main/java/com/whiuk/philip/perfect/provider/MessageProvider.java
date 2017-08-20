@@ -34,6 +34,7 @@ import android.os.Binder;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.BaseColumns;
+import android.support.annotation.NonNull;
 
 import com.whiuk.philip.perfect.PerfectMail;
 import timber.log.Timber;
@@ -130,7 +131,7 @@ public class MessageProvider extends ContentProvider {
     }
 
     @Override
-    public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
+    public Cursor query(@NonNull Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
         if (PerfectMail.app == null) {
             return null;
         }
@@ -155,7 +156,7 @@ public class MessageProvider extends ContentProvider {
     }
 
     @Override
-    public int delete(Uri uri, String selection, String[] selectionArgs) {
+    public int delete(@NonNull Uri uri, String selection, String[] selectionArgs) {
         if (PerfectMail.app == null) {
             return 0;
         }
@@ -196,7 +197,7 @@ public class MessageProvider extends ContentProvider {
     }
 
     @Override
-    public Uri insert(Uri uri, ContentValues values) {
+    public Uri insert(@NonNull Uri uri, ContentValues values) {
         if (PerfectMail.app == null) {
             return null;
         }
@@ -207,7 +208,7 @@ public class MessageProvider extends ContentProvider {
     }
 
     @Override
-    public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) {
+    public int update(@NonNull Uri uri, ContentValues values, String selection, String[] selectionArgs) {
         if (PerfectMail.app == null) {
             return 0;
         }

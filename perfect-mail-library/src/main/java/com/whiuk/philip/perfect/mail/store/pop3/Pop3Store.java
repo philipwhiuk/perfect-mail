@@ -207,7 +207,7 @@ public class Pop3Store extends RemoteStore {
     private String mClientCertificateAlias;
     private AuthType mAuthType;
     private ConnectionSecurity mConnectionSecurity;
-    private Map<String, Folder> mFolders = new HashMap<String, Folder>();
+    private Map<String, Pop3Folder> mFolders = new HashMap<>();
     private Pop3Capabilities mCapabilities;
 
     /**
@@ -240,8 +240,8 @@ public class Pop3Store extends RemoteStore {
     }
 
     @Override
-    public Folder getFolder(String name) {
-        Folder folder = mFolders.get(name);
+    public Pop3Folder getFolder(String name) {
+        Pop3Folder folder = mFolders.get(name);
         if (folder == null) {
             folder = new Pop3Folder(name);
             mFolders.put(folder.getName(), folder);

@@ -689,7 +689,7 @@ public class MessagingController {
                 //fun fact: ImapFolder.fetch can't handle getting STRUCTURE at same time as headers
                 remoteFolder.fetch(Collections.singletonList(message), structure, null);
                 localFolder.appendMessages(Collections.singletonList(message));
-                localMsg = localFolder.getMessage(message.getUid());
+                localFolder.getMessage(message.getUid());
             }
         }
     }

@@ -37,27 +37,27 @@ public class RemoteControl {
     public final static String ACCOUNT_DESCRIPTIONS = BuildConfig.APPLICATION_ID + ".RemoteControl.accountDescriptions";
 
     /**
-     * The {@link {@link Intent}} Action to set in order to cause K-9 to check mail.  (Not yet implemented)
+     * The {@link {@link Intent}} Action to set in order to cause Perfect Mail to check mail.  (Not yet implemented)
      */
-    //public final static String K9_CHECK_MAIL = "com.whiuk.philip.k9.RemoteControl.checkMail";
+    public final static String CHECK_MAIL = "com.whiuk.philip.perfect.RemoteControl.checkMail";
 
     /**
      * The {@link {@link Intent}} Action to set when remotely changing K-9 Mail settings
      */
-    public final static String K9_SET = BuildConfig.APPLICATION_ID + ".RemoteControl.set";
+    public final static String SET = BuildConfig.APPLICATION_ID + ".RemoteControl.set";
     /**
      * The key of the {@link Intent} Extra to set to hold the UUID of a single Account's settings to change.  Used only if K9_ALL_ACCOUNTS
      * is absent or false.
      */
-    public final static String K9_ACCOUNT_UUID = BuildConfig.APPLICATION_ID + ".RemoteControl.accountUuid";
+    public final static String ACCOUNT_UUID = BuildConfig.APPLICATION_ID + ".RemoteControl.accountUuid";
     /**
      * The key of the {@link Intent} Extra to set to control if the settings will apply to all Accounts, or to the one
      * specified with K9_ACCOUNT_UUID
      */
-    public final static String K9_ALL_ACCOUNTS = BuildConfig.APPLICATION_ID + ".RemoteControl.allAccounts";
+    public final static String ALL_ACCOUNTS = BuildConfig.APPLICATION_ID + ".RemoteControl.allAccounts";
 
-    public final static String K9_ENABLED = "true";
-    public final static String K9_DISABLED = "false";
+    public final static String ENABLED = "true";
+    public final static String DISABLED = "false";
 
     /*
      * Key for the {@link Intent} Extra for controlling whether notifications will be generated for new unread mail.
@@ -121,7 +121,7 @@ public class RemoteControl {
     protected static final String LOG_TAG = "RemoteControl";
 
     public static void set(Context context, Intent broadcastIntent) {
-        broadcastIntent.setAction(RemoteControl.K9_SET);
+        broadcastIntent.setAction(RemoteControl.SET);
         context.sendBroadcast(broadcastIntent, RemoteControl.REMOTE_CONTROL_PERMISSION);
     }
 

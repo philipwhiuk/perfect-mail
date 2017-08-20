@@ -1,7 +1,3 @@
-/**
- *
- */
-
 package com.whiuk.philip.perfect.activity.setup;
 
 import android.widget.Spinner;

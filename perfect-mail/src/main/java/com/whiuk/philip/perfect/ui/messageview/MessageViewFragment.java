@@ -281,7 +281,6 @@ public class MessageViewFragment extends Fragment implements ConfirmationDialogF
             // Disable the delete button after it's tapped (to try to prevent
             // accidental clicks)
             mFragmentListener.disableDeleteAction();
-            LocalMessage messageToDelete = mMessage;
             mFragmentListener.showNextMessageOrReturn();
             mController.deleteMessage(mMessageReference, null);
         }

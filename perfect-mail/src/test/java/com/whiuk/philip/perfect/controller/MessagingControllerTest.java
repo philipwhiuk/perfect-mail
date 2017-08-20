@@ -425,7 +425,7 @@ public class MessagingControllerTest {
                  return null;
              }
         }).when(remoteFolder).fetch(
-            Matchers.<List<Message>>eq(Collections.singletonList(remoteNewMessage2)),
+            Matchers.eq(Collections.singletonList(remoteNewMessage2)),
             any(FetchProfile.class),
             Matchers.<MessageRetrievalListener>eq(null));
         reqFlags = Collections.singleton(Flag.ANSWERED);

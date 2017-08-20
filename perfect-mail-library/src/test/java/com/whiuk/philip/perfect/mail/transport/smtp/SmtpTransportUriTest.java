@@ -116,7 +116,7 @@ public class SmtpTransportUriTest {
     public void decodeUri_forUnknownSchema_throwsIllegalArgumentException() {
         String storeUri = "unknown://user:clientCert:EXTERNAL@server:123456";
 
-        ServerSettings result = SmtpTransport.decodeUri(storeUri);
+        SmtpTransport.decodeUri(storeUri);
     }
 
     @Test

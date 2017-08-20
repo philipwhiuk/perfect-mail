@@ -112,7 +112,6 @@ public class Address implements Serializable {
      * Parse a comma separated list of email addresses in human readable format and return an
      * array of Address objects, RFC-822 encoded.
      *
-     * @param addressList
      * @return An array of 0 or more Addresses.
      */
     public static Address[] parseUnencoded(String addressList) {
@@ -133,7 +132,6 @@ public class Address implements Serializable {
      * Parse a comma separated list of addresses in RFC-822 format and return an
      * array of Address objects.
      *
-     * @param addressList
      * @return An array of 0 or more Addresses.
      */
     public static Address[] parse(String addressList) {
@@ -243,15 +241,15 @@ public class Address implements Serializable {
         List<Address> addresses = new ArrayList<Address>();
         int length = addressList.length();
         int pairStartIndex = 0;
-        int pairEndIndex = 0;
-        int addressEndIndex = 0;
+        int pairEndIndex;
+        int addressEndIndex;
         while (pairStartIndex < length) {
             pairEndIndex = addressList.indexOf(",\u0000", pairStartIndex);
             if (pairEndIndex == -1) {
                 pairEndIndex = length;
             }
             addressEndIndex = addressList.indexOf(";\u0000", pairStartIndex);
-            String address = null;
+            String address;
             String personal = null;
             if (addressEndIndex == -1 || addressEndIndex > pairEndIndex) {
                 address = addressList.substring(pairStartIndex, pairEndIndex);
@@ -322,8 +320,6 @@ public class Address implements Serializable {
      * "sa"mp"le" -> "sa"mp"le"
      * (empty string) -> ""
      * " -> """
-     * @param s
-     * @return
      */
     @VisibleForTesting
     static String quoteString(String s) {

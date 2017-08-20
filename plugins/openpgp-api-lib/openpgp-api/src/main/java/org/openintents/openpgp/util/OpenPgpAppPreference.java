@@ -29,6 +29,7 @@ import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.preference.DialogPreference;
+import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
@@ -95,7 +96,8 @@ public class OpenPgpAppPreference extends DialogPreference {
         // Init ArrayAdapter with OpenPGP Providers
         ListAdapter adapter = new ArrayAdapter<OpenPgpProviderEntry>(getContext(),
                 android.R.layout.select_dialog_singlechoice, android.R.id.text1, mList) {
-            public View getView(int position, View convertView, ViewGroup parent) {
+            public @NonNull
+            View getView(int position, View convertView, @NonNull ViewGroup parent) {
                 // User super class to create the View
                 View v = super.getView(position, convertView, parent);
                 TextView tv = (TextView) v.findViewById(android.R.id.text1);

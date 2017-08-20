@@ -1345,7 +1345,7 @@ public class LocalFolder extends Folder<LocalMessage> implements Serializable {
             cv.put("sender_list", Address.pack(message.getFrom()));
             cv.put("date", message.getSentDate() == null
                     ? System.currentTimeMillis() : message.getSentDate().getTime());
-            cv.put("flags", this.localStore.serializeFlags(message.getFlags()));
+            cv.put("flags", LocalStore.serializeFlags(message.getFlags()));
             cv.put("deleted", message.isSet(Flag.DELETED) ? 1 : 0);
             cv.put("read", message.isSet(Flag.SEEN) ? 1 : 0);
             cv.put("flagged", message.isSet(Flag.FLAGGED) ? 1 : 0);

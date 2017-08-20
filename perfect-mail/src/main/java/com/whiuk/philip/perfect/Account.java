@@ -19,6 +19,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.net.Uri;
+import android.support.annotation.Nullable;
 
 import com.whiuk.philip.perfect.AccountStats;
 import com.whiuk.philip.perfect.BaseAccount;
@@ -775,10 +776,10 @@ public class Account implements BaseAccount, StoreConfig {
 
     /**
      * @return <code>null</code> if not available
-     * @throws MessagingException
-     * @see {@link #isAvailable(Context)}
+     * @throws MessagingException If unable to get the local store
+     * @see #isAvailable(Context)
      */
-    public AccountStats getStats(Context context) throws MessagingException {
+    public @Nullable AccountStats getStats(Context context) throws MessagingException {
         if (!isAvailable(context)) {
             return null;
         }
@@ -1469,7 +1470,7 @@ public class Account implements BaseAccount, StoreConfig {
      *
      * @param newStorageProviderId
      *            Never <code>null</code>.
-     * @throws MessagingException
+     * @throws MessagingException If the local store is unavailable
      */
     private void switchLocalStorage(final String newStorageProviderId) throws MessagingException {
         if (!localStorageProviderId.equals(newStorageProviderId)) {

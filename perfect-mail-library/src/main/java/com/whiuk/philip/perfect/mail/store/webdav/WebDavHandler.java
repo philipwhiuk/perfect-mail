@@ -37,7 +37,7 @@ class WebDavHandler extends DefaultHandler {
     public void endElement(String namespaceURI, String localName, String qName) {
         mOpenTags.removeFirst();
 
-        /** Reset the hash temp variables */
+        /* Reset the hash temp variables */
         if (localName.equals("response")) {
             this.mDataSet.finish();
         }

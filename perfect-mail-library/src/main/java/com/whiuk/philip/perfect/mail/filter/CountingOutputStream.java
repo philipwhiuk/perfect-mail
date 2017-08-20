@@ -3,6 +3,9 @@ package com.whiuk.philip.perfect.mail.filter;
 import java.io.IOException;
 import java.io.OutputStream;
 
+import android.support.annotation.NonNull;
+
+
 /**
  * A simple OutputStream that does nothing but count how many bytes are written to it and
  * makes that count available to callers.
@@ -23,12 +26,12 @@ public class CountingOutputStream extends OutputStream {
     }
 
     @Override
-    public void write(byte b[], int offset, int len) throws IOException {
+    public void write(@NonNull byte b[], int offset, int len) throws IOException {
         mCount += len;
     }
 
     @Override
-    public void write(byte[] b) throws IOException {
+    public void write(@NonNull byte[] b) throws IOException {
         mCount += b.length;
     }
 }

@@ -5,6 +5,8 @@ import java.io.FilterOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
+import android.support.annotation.NonNull;
+
 
 /**
  * Further encode a quoted-printable stream into a safer format for signed email.
@@ -66,7 +68,7 @@ public class SignSafeOutputStream extends FilterOutputStream {
     }
 
     @Override
-    public void write(byte[] b, int off, int len) throws IOException {
+    public void write(@NonNull byte[] b, int off, int len) throws IOException {
         if (closed) {
             throw new IOException("Stream has been closed");
         }

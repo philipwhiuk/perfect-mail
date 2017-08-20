@@ -1,6 +1,7 @@
 package com.whiuk.philip.perfect.activity;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 
 import com.whiuk.philip.perfect.Account;
 import com.whiuk.philip.perfect.R;
@@ -31,7 +32,7 @@ public class FolderInfoHolder implements Comparable<FolderInfoHolder> {
         return name.hashCode();
     }
 
-    public int compareTo(FolderInfoHolder o) {
+    public int compareTo(@NonNull FolderInfoHolder o) {
         String s1 = this.name;
         String s2 = o.name;
 

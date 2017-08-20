@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
 import java.util.List;
 
 @RunWith(AndroidJUnit4.class)
-public class MessageProviderTest extends ProviderTestCase2 {
+public class MessageProviderTest extends ProviderTestCase2<MessageProvider> {
 
     private MockContentResolver mMockResolver;
     private Cursor cursor;

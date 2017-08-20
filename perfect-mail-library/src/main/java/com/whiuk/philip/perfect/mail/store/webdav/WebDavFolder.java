@@ -130,7 +130,7 @@ class WebDavFolder extends Folder<WebDavMessage> {
         }
 
         messageBody = store.getMoveOrCopyMessagesReadXml(urls, isMove);
-        WebDavFolder destFolder = (WebDavFolder) store.getFolder(folderName);
+        WebDavFolder destFolder = store.getFolder(folderName);
         headers.put("Destination", destFolder.mFolderUrl);
         headers.put("Brief", "t");
         headers.put("If-Match", "*");
@@ -237,7 +237,7 @@ class WebDavFolder extends Folder<WebDavMessage> {
         String messageBody;
         int prevStart = start;
 
-        /** Reverse the message range since 0 index is newest */
+        /* Reverse the message range since 0 index is newest */
         start = this.mMessageCount - end;
         end = start + (end - prevStart);
 
@@ -249,7 +249,7 @@ class WebDavFolder extends Folder<WebDavMessage> {
             end = 10;
         }
 
-        /** Verify authentication */
+        /* Verify authentication */
         messageBody = store.getMessagesXml();
 
         headers.put("Brief", "t");
@@ -284,7 +284,7 @@ class WebDavFolder extends Folder<WebDavMessage> {
         Map<String, String> headers = new HashMap<String, String>();
         String messageBody;
 
-        /** Retrieve and parse the XML entity for our messages */
+        /* Retrieve and parse the XML entity for our messages */
         messageBody = store.getMessageUrlsXml(uids);
         headers.put("Brief", "t");
 
@@ -301,13 +301,13 @@ class WebDavFolder extends Folder<WebDavMessage> {
             return;
         }
 
-        /**
+        /*
          * Fetch message envelope information for the array
          */
         if (fp.contains(FetchProfile.Item.ENVELOPE)) {
             fetchEnvelope(messages, listener);
         }
-        /**
+        /*
          * Fetch message flag info for the array
          */
         if (fp.contains(FetchProfile.Item.FLAGS)) {
@@ -335,7 +335,7 @@ class WebDavFolder extends Folder<WebDavMessage> {
         WebDavHttpClient httpclient;
         httpclient = store.getHttpClient();
 
-        /**
+        /*
          * We can't hand off to processRequest() since we need the stream to parse.
          */
         for (int i = 0, count = messages.size(); i < count; i++) {
@@ -346,7 +346,7 @@ class WebDavFolder extends Folder<WebDavMessage> {
                 listener.messageStarted(wdMessage.getUid(), i, count);
             }
 
-            /**
+            /*
              * If fetch is called outside of the initial list (ie, a locally stored message), it may not have a URL
              * associated. Verify and fix that
              */
@@ -609,7 +609,7 @@ class WebDavFolder extends Folder<WebDavMessage> {
             String url = uidToUrl.get(uid);
             String destinationUrl = generateDeleteUrl(url);
 
-            /**
+            /*
              * If the destination is the same as the origin, assume delete forever
              */
             if (destinationUrl.equals(url)) {

@@ -135,7 +135,7 @@ public class ImapResponseParserTest {
         TestUntaggedHandler untaggedHandler = new TestUntaggedHandler();
 
         try {
-            List<ImapResponse> responses = parser.readStatusResponse("A2", null, null, untaggedHandler);
+            parser.readStatusResponse("A2", null, null, untaggedHandler);
         } catch (NegativeImapResponseException e) {
         }
 

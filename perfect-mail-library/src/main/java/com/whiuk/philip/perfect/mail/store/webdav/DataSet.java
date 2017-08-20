@@ -52,10 +52,10 @@ class DataSet {
      */
     public Map<String, String> getSpecialFolderToUrl() {
         // We return the first (and only) map
-        for (Map<String, String> folderMap : mData.values()) {
-            return folderMap;
+        if(!mData.isEmpty()) {
+            return mData.values().iterator().next();
         }
-        return new HashMap<String, String>();
+        return new HashMap<>();
     }
 
     /**
@@ -171,7 +171,7 @@ class DataSet {
 
                         envelope.setReadStatus(readStatus);
                     } else if (header.equals("date")) {
-                        /**
+                        /*
                          * Exchange doesn't give us rfc822 dates like it claims. The date is in the format:
                          * yyyy-MM-dd'T'HH:mm:ss.SSS<Single digit representation of timezone, so far, all instances
                          * are Z>

@@ -297,7 +297,7 @@ public class WebDavStoreTest {
 
         List<? extends Folder> folders = webDavStore.getPersonalNamespaces(true);
 
-        List<HttpGeneric> requests = requestCaptor.getAllValues();
+        requestCaptor.getAllValues();
 
         assertEquals(3, folders.size());
     }

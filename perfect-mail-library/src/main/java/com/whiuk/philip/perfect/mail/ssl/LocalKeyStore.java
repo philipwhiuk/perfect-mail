@@ -146,7 +146,7 @@ public class LocalKeyStore {
         if (mKeyStore == null) {
             return false;
         }
-        Certificate storedCert = null;
+        Certificate storedCert;
         try {
             storedCert = mKeyStore.getCertificate(getCertKey(host, port));
             return (storedCert != null && storedCert.equals(certificate));

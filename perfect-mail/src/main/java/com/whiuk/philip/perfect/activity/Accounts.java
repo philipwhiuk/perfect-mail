@@ -32,6 +32,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.text.Editable;
 import android.text.TextWatcher;
 
@@ -1745,7 +1746,7 @@ public class Accounts extends MailListActivity implements OnItemClickListener {
         }
 
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public @NonNull View getView(int position, View convertView, @NonNull ViewGroup parent) {
             final BaseAccount account = getItem(position);
             View view;
             if (convertView != null) {
@@ -1760,10 +1761,10 @@ public class Accounts extends MailListActivity implements OnItemClickListener {
                 holder.email = (TextView) view.findViewById(R.id.email);
                 holder.newMessageCount = (TextView) view.findViewById(R.id.new_message_count);
                 holder.flaggedMessageCount = (TextView) view.findViewById(R.id.flagged_message_count);
-                holder.newMessageCountWrapper = (View) view.findViewById(R.id.new_message_count_wrapper);
-                holder.flaggedMessageCountWrapper = (View) view.findViewById(R.id.flagged_message_count_wrapper);
-                holder.newMessageCountIcon = (View) view.findViewById(R.id.new_message_count_icon);
-                holder.flaggedMessageCountIcon = (View) view.findViewById(R.id.flagged_message_count_icon);
+                holder.newMessageCountWrapper = view.findViewById(R.id.new_message_count_wrapper);
+                holder.flaggedMessageCountWrapper = view.findViewById(R.id.flagged_message_count_wrapper);
+                holder.newMessageCountIcon = view.findViewById(R.id.new_message_count_icon);
+                holder.flaggedMessageCountIcon = view.findViewById(R.id.flagged_message_count_icon);
                 holder.activeIcons = (RelativeLayout) view.findViewById(R.id.active_icons);
 
                 holder.chip = view.findViewById(R.id.chip);
@@ -1793,7 +1794,7 @@ public class Accounts extends MailListActivity implements OnItemClickListener {
 
             holder.description.setText(description);
 
-            Integer unreadMessageCount = null;
+            Integer unreadMessageCount;
             if (stats != null) {
                 unreadMessageCount = stats.unreadMessageCount;
                 holder.newMessageCount.setText(String.format("%d", unreadMessageCount));

@@ -228,15 +228,15 @@ public abstract class Message implements Part, Body {
         destination.mFlags = EnumSet.copyOf(mFlags);
     }
 
+
+    //TODO: Remove this
     /**
      * Creates a new {@code Message} object with the same content as this object.
      *
      * <p>
      * <strong>Note:</strong>
      * This method was introduced as a hack to prevent {@code ConcurrentModificationException}s. It
-     * shouldn't be used unless absolutely necessary. See the comment in
-     * {@link com.whiuk.philip.perfect.activity.MessageView.Listener#loadMessageForViewHeadersAvailable(com.whiuk.philip.perfect.Account, String, String, Message)}
-     * for more information.
+     * shouldn't be used unless absolutely necessary.
      * </p>
      */
     @Override

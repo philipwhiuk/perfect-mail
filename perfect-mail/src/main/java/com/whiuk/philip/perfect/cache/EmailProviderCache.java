@@ -146,7 +146,7 @@ public class EmailProviderCache {
             for (Message message : messages) {
                 LocalMessage localMessage = (LocalMessage) message;
                 long messageId = localMessage.getId();
-                long folderId = ((LocalFolder) localMessage.getFolder()).getId();
+                long folderId = localMessage.getFolder().getId();
                 Long hiddenInFolder = mHiddenMessageCache.get(messageId);
 
                 if (hiddenInFolder != null && hiddenInFolder.longValue() == folderId) {

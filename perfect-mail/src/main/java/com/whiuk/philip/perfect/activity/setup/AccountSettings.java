@@ -496,7 +496,7 @@ public class AccountSettings extends MailPreferenceActivity {
 
             localStorageProvider.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
-                    localStorageProvider.setSummary(providers.get(newValue));
+                    localStorageProvider.setSummary(providers.get(newValue.toString()));
                     return true;
                 }
             });

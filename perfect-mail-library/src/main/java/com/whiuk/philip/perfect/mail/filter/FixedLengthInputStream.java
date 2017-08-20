@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Locale;
 
+import android.support.annotation.NonNull;
+
+
 /**
  * A filtering InputStream that stops allowing reads after the given length has been read. This
  * is used to allow a client to read directly from an underlying protocol stream without reading
@@ -39,7 +42,7 @@ public class FixedLengthInputStream extends InputStream {
     }
 
     @Override
-    public int read(byte[] b, int offset, int length) throws IOException {
+    public int read(@NonNull byte[] b, int offset, int length) throws IOException {
         if (mCount >= mLength) {
             return -1;
         }
@@ -52,7 +55,7 @@ public class FixedLengthInputStream extends InputStream {
     }
 
     @Override
-    public int read(byte[] b) throws IOException {
+    public int read(@NonNull byte[] b) throws IOException {
         return read(b, 0, b.length);
     }
 

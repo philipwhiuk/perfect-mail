@@ -453,9 +453,6 @@ public class AccountSetupBasics extends MailActivity
     /**
      * Attempts to get the given attribute as a String resource first, and if it fails
      * returns the attribute as a simple String value.
-     * @param xml
-     * @param name
-     * @return
      */
     private String getXmlAttribute(XmlResourceParser xml, String name) {
         int resId = xml.getAttributeResourceValue(null, name, 0);

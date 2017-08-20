@@ -5,6 +5,7 @@ import java.util.List;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -106,7 +107,7 @@ public abstract class AccountList extends MailListActivity implements OnItemClic
         }
 
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public @NonNull View getView(int position, View convertView, @NonNull ViewGroup parent) {
             final BaseAccount account = getItem(position);
 
             final View view;

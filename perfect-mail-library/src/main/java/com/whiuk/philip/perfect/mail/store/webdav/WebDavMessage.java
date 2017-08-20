@@ -42,7 +42,7 @@ class WebDavMessage extends MimeMessage {
         this.mUrl = "";
         url = "";
 
-        /**
+        /*
          * We have to decode, then encode the URL because Exchange likes to not properly encode all characters
          */
         try {

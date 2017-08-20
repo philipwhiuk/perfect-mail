@@ -281,8 +281,6 @@ public class AccountSetupCheckSettings extends MailActivity implements OnClickLi
     /**
      * Permanently accepts a certificate for the INCOMING or OUTGOING direction
      * by adding it to the local key store.
-     * 
-     * @param certificate
      */
     private void acceptCertificate(X509Certificate certificate) {
         try {
