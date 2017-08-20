@@ -1,71 +1,54 @@
-# K-9 Mail
-[![Build Status](https://k9mail.ci.cloudbees.com/job/master/badge/icon)](https://k9mail.ci.cloudbees.com/job/master/)
-[![Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/k9mail/k-9)
+# Perfect Mail
 
-K-9 Mail is an open-source email client for Android.
+Perfect Mail is an open-source email client for Android.
 
+It is a fork of K-9 Mail that aims to retain support for more features. 
+
+Features developed for K-9 are merged constructively.
 
 ## Download
 
-K-9 Mail can be downloaded from a couple of sources:
+Perfect Mail can be downloaded from a couple of sources:
 
-- [Google Play](https://play.google.com/store/apps/details?id=com.fsck.k9)
-- [F-Droid](https://f-droid.org/repository/browse/?fdid=com.fsck.k9)
-- [Github Releases](https://github.com/k9mail/k-9/releases)
-- [Amazon Appstore for Android](http://www.amazon.com/dp/B004JK61K0)
+- [Google Play](https://play.google.com/store/apps/details?id=com.whiuk.philip.perfect)
+- [Github Releases](https://github.com/philipwhiuk/perfect-mail/releases)
 
-You might also be interested in becoming a [beta tester](https://github.com/k9mail/k-9/wiki/BetaTester)
-or an [alpha tester](https://github.com/k9mail/k-9/wiki/AlphaTester) to get an early look at new versions.
-
+You might also be interested in becoming a [beta tester](https://github.com/philipwhiuk/perfect-mail/wiki/BetaTester)
+or an [alpha tester](https://github.com/philipwhiuk/perfect-mail/wiki/AlphaTester) to get an early look at new versions.
 
 ## Release Notes
 
-Check out the [Release Notes](https://github.com/k9mail/k-9/wiki/ReleaseNotes) to find out what changed
-in each version of K-9 Mail.
+Check out the [Release Notes](https://github.com/philipwhiuk/perfect-mail/wiki/ReleaseNotes) to find out what changed
+in each version of Perfect Mail.
 
 
 ## Need Help?
 
 If the app is not behaving like it should, you might find these resources helpful:
 
-- [User Manual](https://k9mail.github.io/documentation.html)
-- [Frequently Asked Questions](https://k9mail.github.io/documentation/faq.html)
-- [Support Forum/Mailing List](http://groups.google.com/group/k-9-mail)
-- [Google+ Community](https://plus.google.com/communities/109228641058741937099)
-
+- [User Manual](https://philipwhiuk.github.io/perfect-mail/documentation.html)
+- [Frequently Asked Questions](https://philipwhiuk.github.io/perfect-mail/documentation/faq.html)
+- [Support Forum/Mailing List](http://groups.google.com/group/perfect-mail)
 
 ## Translations
 
-Interested in helping to translate K-9 Mail? Contribute here:
+Interested in helping to translate Per Mail? Contribute either via a PR or here:
 
-https://www.transifex.com/projects/p/k9mail/
-
-
-## Design
-
-A re-design is underway. You can contribute, view updates and access design files here: 
-
-https://github.com/k9mail/k-9-design
-
+https://www.transifex.com/projects/p/perfect-mail/
 
 ## Contributing
 
-Please fork this repository and contribute back using [pull requests](https://github.com/k9mail/k-9/pulls).
+Please fork this repository and contribute back using [pull requests](https://github.com/philipwhiuk/perfect-mail/pulls).
 
 Any contributions, large or small, major features, bug fixes, unit/integration tests are welcomed and appreciated
 but will be thoroughly reviewed and discussed.
-Please make sure you read the [Code Style Guidelines](https://github.com/k9mail/k-9/wiki/CodeStyle).
 
+Please make sure you read the [Code Style Guidelines](https://github.com/philipwhiuk/perfect-mail/wiki/CodeStyle).
 
 ## Communication
 
-Aside from discussing changes in [pull requests](https://github.com/k9mail/k-9/pulls) and
-[issues](https://github.com/k9mail/k-9/issues) we use the following communication services:
-
-- IRC chat, [#k-9 on the Freenode network](http://webchat.freenode.net/?channels=%23k-9)
-- [Gitter](https://gitter.im/k9mail/k-9)
-- [Developer mailing list](https://groups.google.com/forum/#!forum/k-9-dev)
-
+All communication is handled via GitHub to simplify discussion as [pull requests](https://github.com/philipwhiuk/perfect-mail/pulls) and
+[issues](https://github.com/philipwhiuk/perfect-mail/issues).
 
 ## License
 
@@ -80,11 +63,3 @@ Aside from discussing changes in [pull requests](https://github.com/k9mail/k-9/p
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
-
-## Sponsors
-
-CloudBees' [FOSS program](https://www.cloudbees.com/resources/foss) allows us to use their DEV@cloud service for free.
-
-![built on DEV@cloud](https://www.cloudbees.com/sites/default/files/styles/large/public/Button-Built-on-CB-1.png)
-

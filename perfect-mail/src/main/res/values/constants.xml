@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_revision_url">https://github.com/philipwhiuk/perfect-mail/wiki/ReleaseNotes</string>
+    <string name="app_webpage_url">https://philipwhiuk.github.io/perfect-mail/</string>
+    <string name="message_header_mua">Perfect Mail for Android</string>
+</resources>

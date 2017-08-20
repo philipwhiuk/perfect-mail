@@ -4,7 +4,7 @@
 # the project. It has been tested with Debian 8
 
 USERNAME=$USER
-SIGNING_NAME='k-9'
+SIGNING_NAME='perfect-mail'
 SDK_VERSION='r24.3.3'
 SDK_DIR=$HOME/android-sdk
 
@@ -54,15 +54,15 @@ fi
 #keytool -genkey -v -keystore example.keystore -alias \
 #    "$SIGNING_NAME" -keyalg RSA -keysize 4096
 #jarsigner -verbose -keystore example.keystore \
-#    k9mail-release-unsigned.apk "$SIGNING_NAME"
+#    perfect-mail-release-unsigned.apk "$SIGNING_NAME"
 
 # cleaning up
-cd $PROJECT_HOME/k9mail/build/outputs/apk
-if [ ! -f k9mail-debug.apk ]; then
-    echo 'k9mail-debug.apk was not found'
+cd $PROJECT_HOME/perfect-mail/build/outputs/apk
+if [ ! -f perfect-mail-debug.apk ]; then
+    echo 'perfect-mail-debug.apk was not found'
     exit -3
 fi
 echo 'Build script ended successfully'
 echo -n 'apk is available at: '
-echo "$PROJECT_HOME/k9mail/build/outputs/apk/k9mail-debug.apk"
+echo "$PROJECT_HOME/perfect-mail/build/outputs/apk/perfect-mail-debug.apk"
 exit 0
